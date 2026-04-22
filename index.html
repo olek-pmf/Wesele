@@ -13,7 +13,7 @@
     <main class="max-w-4xl mx-auto bg-[#fffdfa] shadow-xl shadow-sky-900/5 relative overflow-hidden rounded-sm">
         
         <!-- Language Switcher -->
-        <div class="absolute top-6 right-6 sm:top-10 sm:right-10 z-50 flex gap-3 text-xs font-['Inter'] uppercase tracking-[0.2em] text-slate-400 bg-[#fffdfa]/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-sky-900/5">
+        <div class="sm:top-10 sm:right-10 z-50 flex gap-3 uppercase text-xs text-slate-400 tracking-[0.2em] font-['Inter'] bg-[#fffdfa]/80 border-sky-900/5 border rounded-full pt-1.5 pr-3 pb-1.5 pl-3 absolute top-6 right-6 backdrop-blur-sm">
             <button onclick="switchLanguage('pl')" id="lang-btn-pl" class="text-sky-900 font-medium transition-colors hover:text-sky-900">PL</button>
             <span class="opacity-30">|</span>
             <button onclick="switchLanguage('en')" class="transition-colors hover:text-sky-900" id="lang-btn-en">EN</button>
@@ -31,35 +31,55 @@
         <div class="sm:px-16 sm:py-24 z-20 pt-20 pr-6 pb-16 pl-6 relative">
             
             <!-- Shared Hero Image -->
-            <div class="flex justify-center mb-10 relative z-20">
+            <div class="flex z-20 mb-10 relative justify-center">
     <div class="sm:w-52 aspect-[3/4] overflow-hidden shadow-sky-900/10 w-44">
         <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/d1996166-270e-43d0-9be2-da9f38d939c2_800w.jpg" alt="Romantic Couple at Sunset" class="transition-all duration-1000 scale-[0.85] -rotate-6 hover:scale-[0.90] hover:-rotate-3 w-full h-full object-cover rounded-tl-[50%] rounded-br-[50%] rounded-tr-2xl rounded-bl-2xl border-4 border-white shadow-xl shadow-sky-900/20">
     </div>
 </div>
 
             <!-- POLISH CONTENT -->
-            <div id="content-pl" class="">
+            <div class="" id="content-pl">
                 <!-- Hero Section -->
                 <section class="text-center mb-24 relative">
-                    <span class="block text-xs tracking-[0.3em] uppercase text-emerald-700/70 mb-8 font-normal">
+                    <span class="block uppercase text-xs font-normal text-emerald-700/70 tracking-[0.3em] mb-8">
                         Będzie ślub!
                     </span>
                     
-                    <h1 class="font-['Alex_Brush'] text-7xl sm:text-8xl md:text-9xl text-sky-900 mb-8 leading-tight tracking-tight">
+                    <h1 class="sm:text-8xl md:text-9xl leading-tight text-7xl text-sky-900 tracking-tight font-['Alex_Brush'] mb-8">
                         Natalia <span class="text-4xl sm:text-6xl mx-2 text-yellow-500/80">&amp;</span> Olek
                     </h1>
                     
-                    <div class="sm:text-2xl uppercase flex flex-col sm:flex-row gap-2 sm:gap-6 text-xl text-sky-900 tracking-widest font-['Cormorant_Garamond'] mb-12 gap-x-2 gap-y-2 items-center justify-center">
+                    <div class="sm:text-2xl uppercase flex flex-col sm:flex-row sm:gap-6 text-xl text-sky-900 tracking-widest font-['Cormorant_Garamond'] mb-12 items-center justify-center">
                         <span class="">30 Maja 2026</span>
                         <span class="hidden sm:block text-emerald-600">·</span>
-                        <span class="">Zamek Topacz</span>
+                        <span class="">Zamek Topacz</span><span class="hidden sm:block text-emerald-600">·</span><span class="">15:00</span>
                     </div>
 
-                    <div class="max-w-2xl mx-auto">
-                        <p class="leading-relaxed text-lg font-light italic text-slate-600 text-center">
-                            Cieszymy się, że będziecie częścią tego wyjątkowego dnia! Poniżej znajdziecie wszystkie informacje, które pomogą Wam dobrze się przygotować na nasze wesele. 
-                            <iconify-icon icon="solar:wineglass-linear" class="inline-block text-xl text-yellow-500 ml-1 translate-y-1" style="stroke-width: 1.5;"></iconify-icon>
-                        </p>
+                    <div class="max-w-2xl mr-auto ml-auto">
+                        <p class="leading-relaxed text-lg font-light italic text-slate-600 text-center">Cieszymy się, że będziecie częścią tego wyjątkowego dnia! Chcemy, abyście czuli się swobodnie, dlatego w tym miejscu zebraliśmy kilka wskazówek i informacji, które ułatwią nam wspólne świętowanie.<iconify-icon icon="solar:wineglass-linear" class="inline-block text-xl text-yellow-500 ml-1 translate-y-1" style="stroke-width: 1.5;"></iconify-icon></p>
+                    </div>
+
+                    <!-- Countdown Widget PL -->
+                    <div class="flex justify-center items-center gap-4 sm:gap-8 mt-12 bg-white/60 py-5 px-6 sm:px-10 border border-sky-900/5 rounded-full backdrop-blur-sm mx-auto max-w-fit shadow-sm shadow-sky-900/5">
+                        <div class="flex flex-col items-center min-w-[3rem] sm:min-w-[4rem]">
+                            <span class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl text-sky-900 tracking-tight" id="cd-days-pl">37</span>
+                            <span class="text-[10px] sm:text-xs uppercase tracking-widest text-emerald-700/70 mt-1 font-['Inter']">Dni</span>
+                        </div>
+                        <span class="text-2xl text-sky-900/20 font-light mb-4">:</span>
+                        <div class="flex flex-col items-center min-w-[3rem] sm:min-w-[4rem]">
+                            <span class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl text-sky-900 tracking-tight" id="cd-hours-pl">17</span>
+                            <span class="text-[10px] sm:text-xs uppercase tracking-widest text-emerald-700/70 mt-1 font-['Inter']">Godz</span>
+                        </div>
+                        <span class="text-2xl text-sky-900/20 font-light mb-4">:</span>
+                        <div class="flex flex-col items-center min-w-[3rem] sm:min-w-[4rem]">
+                            <span class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl text-sky-900 tracking-tight" id="cd-minutes-pl">00</span>
+                            <span class="text-[10px] sm:text-xs uppercase tracking-widest text-emerald-700/70 mt-1 font-['Inter']">Min</span>
+                        </div>
+                        <span class="text-2xl text-sky-900/20 font-light mb-4 hidden sm:inline">:</span>
+                        <div class="flex-col items-center min-w-[3rem] sm:min-w-[4rem] hidden sm:flex">
+                            <span class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl text-sky-900 tracking-tight" id="cd-seconds-pl">55</span>
+                            <span class="text-[10px] sm:text-xs uppercase tracking-widest text-emerald-700/70 mt-1 font-['Inter']">Sek</span>
+                        </div>
                     </div>
                 </section>
 
@@ -87,23 +107,39 @@
                             <div class="pt-6">
                                 <h3 class="font-normal text-emerald-700 mb-6 text-center tracking-tight">Plan dnia</h3>
                                 <div class="space-y-5">
-                                    <div class="flex gap-6 items-start group">
+                                    <div class="flex gap-6 group gap-x-6 gap-y-6 items-start">
                                         <div class="w-16 text-right font-normal text-sky-900 pt-0.5">15:00</div>
                                         <div class="flex-1 group-last:border-0 border-sky-900/5 border-b pb-5">
                                             <p class="text-slate-700">Ceremonia cywilna</p>
                                             <p class="text-sm text-slate-400 mt-1 uppercase tracking-wider">Oficyna, ogród zamkowy</p>
                                         </div>
+                                    </div><div class="flex gap-6 group gap-x-6 gap-y-6 items-start">
+                                        <div class="font-normal text-sky-900 text-right w-16 pt-0.5">15:30</div>
+                                        <div class="flex-1 group-last:border-0 border-sky-900/5 border-b pb-5">
+                                            <p class="text-slate-700">Życzenia na sali i początek przyjęcia weselnego</p>
+                                            <p class="uppercase text-sm text-slate-400 tracking-wider mt-1">Sala Balowa</p>
+                                        </div>
                                     </div>
                                     <div class="flex gap-6 items-start group">
-                                        <div class="w-16 text-right font-normal text-sky-900 pt-0.5">15:30</div>
+                                        <div class="font-normal text-sky-900 text-right w-16 pt-0.5">16:00</div>
                                         <div class="flex-1 group-last:border-0 border-sky-900/5 border-b pb-5">
-                                            <p class="text-slate-700">Początek przyjęcia weselnego</p>
+                                            <p class="text-slate-700">Obiad</p>
+                                        </div>
+                                    </div><div class="flex gap-6 items-start group">
+                                        <div class="font-normal text-sky-900 text-right w-16 pt-0.5">20:00</div>
+                                        <div class="flex-1 group-last:border-0 border-sky-900/5 border-b pb-5">
+                                            <p class="text-slate-700">Kolacja serwowana</p>
+                                        </div>
+                                    </div><div class="flex gap-6 items-start group">
+                                        <div class="font-normal text-sky-900 text-right w-16 pt-0.5">23:00</div>
+                                        <div class="flex-1 group-last:border-0 border-sky-900/5 border-b pb-5">
+                                            <p class="text-slate-700">Kolacja w formie ciepłego bufetu</p>
                                         </div>
                                     </div>
                                     <div class="flex gap-6 items-start group">
                                         <div class="w-16 text-right font-normal text-sky-900 pt-0.5">3:30</div>
                                         <div class="flex-1 pb-5 border-b border-sky-900/5 group-last:border-0">
-                                            <p class="text-slate-700">Zakończenie imprezy</p>
+                                            <p class="text-slate-700">Zakończenie wesela</p>
                                         </div>
                                     </div>
                                 </div>
@@ -119,13 +155,9 @@
                             <iconify-icon icon="solar:leaf-linear" class="text-4xl text-emerald-600 mb-4" style="stroke-width: 1.5;"></iconify-icon>
                             <h2 class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl tracking-tight text-sky-900 font-normal text-center">Ceremonia</h2>
                         </div>
-                        <div class="max-w-2xl mx-auto text-lg text-slate-600 font-light leading-relaxed text-center space-y-4">
-                            <p class="">
-                                Nasza ceremonia będzie <span class="font-normal text-emerald-700">ślubem cywilnym</span> – uroczystym, radosnym i pełnym emocji. Odbędzie się <span class="font-normal text-emerald-700">na świeżym powietrzu, w ogrodzie budynku Oficyna</span> na terenie Zamku Topacz.
-                            </p>
-                            <p class="">
-                                Prosimy o punktualne przybycie – ceremonia rozpoczyna się dokładnie o godzinie <span class="font-normal text-sky-900">15:00</span>. Zaplanujcie dojazd z odpowiednim wyprzedzeniem.
-                            </p>
+                        <div class="leading-relaxed text-lg font-light text-slate-600 text-center max-w-2xl mr-auto ml-auto space-y-4">
+                            <p class="">Nasza ceremonia będzie <span class="font-normal text-emerald-700">ślubem cywilnym</span> – uroczystym, radosnym i pełnym emocji. Odbędzie się <span class="font-normal text-emerald-700">na świeżym powietrzu, w ogrodzie budynku Oficyna</span> na terenie Zamku Topacz.</p>
+                            <p class="">Prosimy o punktualne przybycie – ceremonia rozpoczyna się dokładnie o godzinie <span class="font-normal text-sky-900">15:00</span> i potrwa około <span class="font-normal text-sky-900">20 minut</span>. Miejsca siedzące prosimy zostawić dla starszych gości i osób potrzebujących większego komfortu.</p>
                         </div>
                     </section>
 
@@ -137,7 +169,7 @@
                             <iconify-icon icon="solar:buildings-linear" class="text-4xl text-yellow-500 mb-4" style="stroke-width: 1.5;"></iconify-icon>
                             <h2 class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl tracking-tight text-sky-900 font-normal text-center">Miejsce – Zamek Topacz</h2>
                         </div>
-                        <div class="max-w-2xl mx-auto text-lg text-slate-600 font-light leading-relaxed text-center space-y-6">
+                        <div class="leading-relaxed text-lg font-light text-slate-600 text-center max-w-2xl mr-auto ml-auto space-y-6">
                             <p class="">Zamek Topacz to wyjątkowy kompleks położony w Kobierzycach, zaledwie kilkanaście minut od centrum Wrocławia. Historyczny charakter miejsca, otoczony parkiem i ogrodami, tworzy niepowtarzalną atmosferę.</p>
                             <div class="bg-sky-50/50 p-6 rounded-sm border border-sky-100 mt-8 transition-colors hover:bg-sky-50/80">
                                 <p class="font-normal text-sky-900 mb-1">Zamek Topacz</p>
@@ -161,13 +193,9 @@
                             <iconify-icon icon="solar:bed-linear" class="text-4xl text-sky-600 mb-4" style="stroke-width: 1.5;"></iconify-icon>
                             <h2 class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl tracking-tight text-sky-900 font-normal text-center">Noclegi</h2>
                         </div>
-                        <div class="max-w-2xl mx-auto text-lg text-slate-600 font-light leading-relaxed text-center space-y-6">
-                            <p class="">
-                                Noclegi dla gości weselnych zarezerwowane są w <span class="font-normal text-sky-900">Hotelu Bielany</span>, który znajduje się zaledwie <span class="font-normal text-sky-900">5 minut jazdy samochodem</span> od Zamku Topacz – idealnie, żebyście mogli bawić się do końca bez stresu o powrót!
-                            </p>
-                            <p class="text-emerald-800 font-light bg-emerald-50/50 p-5 border border-emerald-100 rounded-sm">
-                                Jeśli planujecie nocleg – dajcie nam znać jak najszybciej, żebyśmy mogli zarezerwować dla Was miejsce.
-                            </p>
+                        <div class="leading-relaxed text-lg font-light text-slate-600 text-center max-w-2xl mr-auto ml-auto space-y-6">
+                            <p class="">Dla gości, którzy zgłosili potrzebę noclegu, zarezerwowaliśmy miejsca w <span class="font-normal text-sky-900">Hotelu Bielany</span>, który znajduje się zaledwie <span class="font-normal text-sky-900">5 minut jazdy samochodem</span> od Zamku Topacz – idealnie, żebyście mogli bawić się do końca bez stresu o powrót!</p>
+                            <p class="font-light text-emerald-800 bg-emerald-50/50 border-emerald-100 border rounded-sm pt-5 pr-5 pb-5 pl-5">W razie jakichkolwiek zmian dotyczących noclegu – dajcie nam znać jak najszybciej.</p><p class="">Doba hotelowa trwa od <span class="font-normal text-sky-900">14:00</span> w dniu przyjazdu do <span class="font-normal text-sky-900">12:00</span> w dniu wyjazdu. Śniadanie w formie bufetu szwedzkiego jest serwowane w godz. <span class="font-normal text-sky-900">6:30 – 10:00</span>.</p>
                             <div class="bg-amber-50/30 p-6 rounded-sm border border-amber-100 mt-8 transition-colors hover:bg-amber-50/60">
                                 <p class="font-normal text-sky-900 mb-1">Hotel Bielany</p>
                                 <p class="text-sm text-slate-500 mb-4">ul. Klecińska 3, 55-040 Bielany Wrocławskie</p>
@@ -187,7 +215,7 @@
                             <h2 class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl tracking-tight text-sky-900 font-normal text-center">Dojazd i transport</h2>
                         </div>
                         
-                        <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-12">
+                        <div class="grid md:grid-cols-2 gap-12 max-w-3xl mr-auto ml-auto gap-x-12 gap-y-12">
                             <div class="space-y-4">
                                 <h3 class="font-normal text-sky-900 text-xl border-b border-sky-900/5 pb-2 mb-4 tracking-tight">Na wesele</h3>
                                 <p class="text-lg font-light text-slate-600">
@@ -204,18 +232,18 @@
 
                             <div class="space-y-4">
                                 <h3 class="font-normal text-sky-900 text-xl border-b border-sky-900/5 pb-2 mb-4 tracking-tight">Po weselu</h3>
-                                <div class="flex items-start gap-4">
-                                    <div class="bg-sky-50 p-2 rounded-full shrink-0 mt-1">
-                                        <iconify-icon icon="solar:bus-linear" class="text-xl text-sky-600"></iconify-icon>
+                                <div class="flex gap-4 gap-x-4 gap-y-4 items-start">
+                                    <div class="shrink-0 bg-sky-50 rounded-full mt-1 pt-2 pr-2 pb-2 pl-2">
+                                        <iconify-icon icon="solar:bus-linear" class="text-xl text-sky-600" width="20" height="20" style="color: rgb(2, 132, 199)"></iconify-icon>
                                     </div>
                                     <p class="text-lg font-light text-slate-600">
                                         Dla gości nocujących w <span class="font-normal text-sky-900">Hotelu Bielany</span> zapewniamy <span class="font-normal text-sky-900">busik kursujący między Zamkiem a hotelem</span>.
                                     </p>
                                 </div>
-                                <div class="flex items-start gap-4 mt-6">
-                                    <div class="bg-yellow-50 p-2 rounded-full shrink-0 mt-1">
-                                        <iconify-icon icon="solar:map-arrow-linear" class="text-xl text-yellow-600"></iconify-icon>
-                                    </div>
+                                <div class="flex gap-4 mt-6 items-start">
+                                    <div class="shrink-0 bg-yellow-50 rounded-full mt-1 pt-2 pr-2 pb-2 pl-2">
+                                        
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="text-xl text-sky-600" style="color: rgb(234, 179, 8)" data-icon-set="solar" data-solar="point-on-map-outline"><path fill="currentColor" fill-rule="evenodd" d="M5.25 7.7c0-3.598 3.059-6.45 6.75-6.45c3.608 0 6.612 2.725 6.745 6.208l.478.16c.463.153.87.289 1.191.439c.348.162.667.37.911.709s.341.707.385 1.088c.04.353.04.78.04 1.269v5.748c0 .61 0 1.13-.047 1.547c-.05.438-.161.87-.463 1.237a2.3 2.3 0 0 1-.62.525c-.412.237-.855.276-1.296.253c-.42-.022-.933-.107-1.534-.208l-.041-.007c-1.293-.215-1.814-.296-2.322-.254q-.278.023-.552.083c-.498.109-.976.342-2.159.933l-.122.061c-1.383.692-2.234 1.118-3.154 1.251q-.415.06-.835.06c-.928-.002-1.825-.301-3.28-.786l-.127-.043l-.384-.128l-.037-.012c-.463-.154-.87-.29-1.191-.44c-.348-.162-.667-.37-.911-.709s-.341-.707-.385-1.088c-.04-.353-.04-.78-.04-1.269v-5.02c0-.786 0-1.448.067-1.967c.07-.542.23-1.072.666-1.47a2.3 2.3 0 0 1 .42-.304c.517-.287 1.07-.27 1.605-.166q.164.032.342.078q-.1-.67-.1-1.328m.499 3.01a9 9 0 0 0-1.028-.288c-.395-.077-.525-.03-.586.004a1 1 0 0 0-.14.101c-.053.048-.138.156-.19.556c-.053.41-.055.974-.055 1.825v4.93c0 .539.001.88.03 1.138c.028.238.072.327.112.381c.039.055.109.125.326.226c.236.11.56.219 1.07.39l.384.127c1.624.541 2.279.75 2.936.752q.31 0 .617-.044c.65-.094 1.276-.397 2.82-1.17l.093-.046c1.06-.53 1.714-.857 2.417-1.01q.37-.081.747-.113c.717-.06 1.432.06 2.593.253l.1.017c.655.109 1.083.18 1.407.196c.312.016.419-.025.471-.055a.8.8 0 0 0 .207-.175c.039-.047.097-.146.132-.456c.037-.323.038-.757.038-1.42v-5.667c0-.539-.001-.88-.03-1.138c-.028-.238-.072-.327-.112-.381c-.039-.055-.109-.125-.326-.226c-.236-.11-.56-.219-1.07-.39l-.06-.019a10.7 10.7 0 0 1-1.335 3.788c-.912 1.568-2.247 2.934-3.92 3.663a3.5 3.5 0 0 1-2.794 0c-1.673-.73-3.008-2.095-3.92-3.663a11 11 0 0 1-.934-2.087M12 2.75c-2.936 0-5.25 2.252-5.25 4.95c0 1.418.437 2.98 1.23 4.341c.791 1.362 1.908 2.47 3.223 3.044c.505.22 1.089.22 1.594 0c1.316-.574 2.432-1.682 3.224-3.044c.792-1.36 1.229-2.923 1.229-4.34c0-2.699-2.314-4.951-5.25-4.951m0 4a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 0 0 0-2.5M9.25 8a2.75 2.75 0 1 1 5.5 0a2.75 2.75 0 0 1-5.5 0" clip-rule="evenodd"></path></svg></div>
                                     <p class="text-lg font-light text-slate-600">
                                         Dla gości wracających do <span class="font-normal text-sky-900">Wrocławia</span> – regularnie kursują taksówki i aplikacje: <span class="font-normal text-sky-900">Uber, Bolt, FreeNow</span>. Czas przejazdu to ok. 15–20 min.
                                     </p>
@@ -228,22 +256,22 @@
 
                     <!-- Muzyka i zabawa & Kolacja -->
                     <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-                        <section class="text-center md:text-left">
-                            <div class="flex flex-col md:flex-row items-center gap-3 mb-6 justify-center md:justify-start">
+                        <section class="md:text-left text-center">
+                            <div class="flex flex-col md:flex-row md:justify-start mb-6 gap-x-3 gap-y-3 items-center justify-center">
                                 <iconify-icon icon="solar:music-notes-linear" class="text-3xl text-yellow-500" style="stroke-width: 1.5;"></iconify-icon>
                                 <h2 class="font-['Cormorant_Garamond'] text-2xl sm:text-3xl tracking-tight text-sky-900 font-normal">Muzyka i zabawa</h2>
                             </div>
-                            <p class="text-lg text-slate-600 font-light leading-relaxed">
+                            <p class="leading-relaxed text-lg font-light text-slate-600">
                                 Przez całą noc będzie bawił Was nasz DJ – szykujcie się na parkiet! Impreza trwa od <span class="font-normal text-sky-900">15:30 do 3:30 w nocy</span>, więc wygodne buty taneczne to obowiązek.
                             </p>
                         </section>
 
                         <section class="text-center md:text-left">
-                            <div class="flex flex-col md:flex-row items-center gap-3 mb-6 justify-center md:justify-start">
+                            <div class="flex flex-col md:flex-row md:justify-start mb-6 gap-x-3 gap-y-3 items-center justify-center">
                                 <iconify-icon icon="solar:cup-hot-linear" class="text-3xl text-emerald-600" style="stroke-width: 1.5;"></iconify-icon>
-                                <h2 class="font-['Cormorant_Garamond'] text-2xl sm:text-3xl tracking-tight text-sky-900 font-normal">Kolacja i menu</h2>
+                                <h2 class="sm:text-3xl text-2xl font-normal text-sky-900 tracking-tight font-['Cormorant_Garamond']">Preferencje żywieniowe</h2>
                             </div>
-                            <p class="leading-relaxed text-lg font-light text-slate-600">Czeka Was <span class="font-normal text-sky-900">4-daniowy obiad weselny</span> oraz kolacja bufetowa. Na zakończenie – tort weselny! Jeśli macie szczególne potrzeby dietetyczne lub alergie pokarmowe, prosimy o kontakt z nami wcześniej.</p>
+                            <p class="leading-relaxed text-lg font-light text-slate-600">Jeśli macie szczególne potrzeby dietetyczne lub alergie pokarmowe, prosimy o kontakt z nami wcześniej.</p>
                         </section>
                     </div>
 
@@ -261,7 +289,7 @@
                                 <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1f1271c4-736f-4005-842d-b23aafc8892f_800w.jpg" alt="Couple Walking in Tropical Sandbar Lagoon" class="transition-transform duration-700 group-hover:scale-105 w-full h-full object-cover">
                             </div>
                             <div class="aspect-[4/5] overflow-hidden rounded-sm border border-sky-900/5 group relative bg-sky-50">
-                                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4277ffce-30ef-49a7-a8bf-432ed99d8f7f_800w.jpg" alt="Aerial View of Couple Floating in Clear Sea" class="transition-transform duration-700 group-hover:scale-105 w-full h-full object-cover">
+                                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c092a520-34d3-437d-a77d-4ca2e1d8eb2c_800w.jpg" alt="Aerial View of Couple Floating in Clear Sea" class="transition-transform duration-700 group-hover:scale-105 w-full h-full object-cover">
                             </div>
                             <div class="aspect-[4/5] overflow-hidden rounded-sm border border-sky-900/5 group relative bg-sky-50">
                                 <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/9556a1ec-9b70-44c5-9b00-beb210e5926b_800w.jpg" alt="Romantic Couple on Tropical Sandbar" class="transition-transform duration-700 group-hover:scale-105 w-full h-full object-cover">
@@ -275,21 +303,28 @@
 
                     <!-- Kontakt -->
                     <section class="text-center pb-8">
-                        <div class="flex flex-col items-center mb-6">
+                        <div class="flex flex-col mb-6 items-center">
                             <iconify-icon icon="solar:letter-linear" class="text-4xl text-sky-600 mb-4" style="stroke-width: 1.5;"></iconify-icon>
                             <h2 class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl tracking-tight text-sky-900 font-normal">Kontakt</h2>
                         </div>
-                        <p class="text-lg text-slate-600 font-light mb-8">
-                            Pytania? Piszcie śmiało!
-                        </p>
-                        <div class="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16 font-['Cormorant_Garamond'] text-xl tracking-wide text-sky-900">
-                            <div>
-                                <span class="block text-xs font-['Inter'] uppercase tracking-widest text-emerald-700/60 mb-1">Natalia</span>
+                        <div class="flex flex-col text-xl text-sky-900 tracking-wide font-['Cormorant_Garamond'] mt-8 mb-4 gap-x-16 justify-center gap-y-4 sm:flex-row sm:gap-16">
+                            <div class="w-50">
+                                <span class="block uppercase text-xs text-emerald-700/60 tracking-widest font-['Inter'] mb-1">Natalia</span>
                                 726 120 246
                             </div>
-                            <div>
-                                <span class="block text-xs font-['Inter'] uppercase tracking-widest text-emerald-700/60 mb-1">Olek</span>
+                            <div class="w-50 gap-x-y-4 gap-y-4">
+                                <span class="block uppercase text-xs text-emerald-700/60 tracking-widest font-['Inter'] mb-1">Olek</span>
                                 579 030 876
+                            </div>
+                        </div><div class="flex flex-col sm:flex-row sm:gap-16 text-xl text-sky-900 tracking-wide font-['Cormorant_Garamond'] gap-y-4 justify-center">
+                            <div class="w-50">
+                                <span class="block uppercase text-xs text-emerald-700/60 tracking-widest font-['Inter'] mb-1">Martyna 
+(świadkowa)</span>
+                                796 664 889
+                            </div>
+                            <div class="w-50">
+                                <span class="block uppercase text-xs text-emerald-700/60 tracking-widest font-['Inter'] mb-1">Karol (świadek)</span>
+                                792 586 430
                             </div>
                         </div>
                     </section>
@@ -311,14 +346,38 @@
                     <div class="sm:text-2xl uppercase flex flex-col sm:flex-row gap-2 sm:gap-6 text-xl text-sky-900 tracking-widest font-['Cormorant_Garamond'] mb-12 gap-x-2 gap-y-2 items-center justify-center">
                         <span class="">May 30, 2026</span>
                         <span class="hidden sm:block text-emerald-600">·</span>
-                        <span class="">Topacz Castle</span>
+                        <span class="">Topacz Castle</span><span class="hidden sm:block text-emerald-600">·</span>
+                        <span class="">3:00 PM</span>
                     </div>
 
                     <div class="max-w-2xl mx-auto">
                         <p class="leading-relaxed text-lg font-light italic text-slate-600 text-center">
-                            We are thrilled that you will be part of this special day! Below you will find all the information to help you prepare for our wedding. 
+                            We are thrilled that you will be part of this special day! We want you to feel at ease, so we've put together a few tips and details to help us celebrate together. 
                             <iconify-icon icon="solar:wineglass-linear" class="inline-block text-xl text-yellow-500 ml-1 translate-y-1" style="stroke-width: 1.5;"></iconify-icon>
                         </p>
+                    </div>
+
+                    <!-- Countdown Widget EN -->
+                    <div class="flex justify-center items-center gap-4 sm:gap-8 mt-12 bg-white/60 py-5 px-6 sm:px-10 border border-sky-900/5 rounded-full backdrop-blur-sm mx-auto max-w-fit shadow-sm shadow-sky-900/5">
+                        <div class="flex flex-col items-center min-w-[3rem] sm:min-w-[4rem]">
+                            <span class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl text-sky-900 tracking-tight" id="cd-days-en">37</span>
+                            <span class="text-[10px] sm:text-xs uppercase tracking-widest text-emerald-700/70 mt-1 font-['Inter']">Days</span>
+                        </div>
+                        <span class="text-2xl text-sky-900/20 font-light mb-4">:</span>
+                        <div class="flex flex-col items-center min-w-[3rem] sm:min-w-[4rem]">
+                            <span class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl text-sky-900 tracking-tight" id="cd-hours-en">17</span>
+                            <span class="text-[10px] sm:text-xs uppercase tracking-widest text-emerald-700/70 mt-1 font-['Inter']">Hrs</span>
+                        </div>
+                        <span class="text-2xl text-sky-900/20 font-light mb-4">:</span>
+                        <div class="flex flex-col items-center min-w-[3rem] sm:min-w-[4rem]">
+                            <span class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl text-sky-900 tracking-tight" id="cd-minutes-en">00</span>
+                            <span class="text-[10px] sm:text-xs uppercase tracking-widest text-emerald-700/70 mt-1 font-['Inter']">Min</span>
+                        </div>
+                        <span class="text-2xl text-sky-900/20 font-light mb-4 hidden sm:inline">:</span>
+                        <div class="flex-col items-center min-w-[3rem] sm:min-w-[4rem] hidden sm:flex">
+                            <span class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl text-sky-900 tracking-tight" id="cd-seconds-en">55</span>
+                            <span class="text-[10px] sm:text-xs uppercase tracking-widest text-emerald-700/70 mt-1 font-['Inter']">Sec</span>
+                        </div>
                     </div>
                 </section>
 
@@ -353,16 +412,35 @@
                                             <p class="text-sm text-slate-400 mt-1 uppercase tracking-wider">Oficyna, castle garden</p>
                                         </div>
                                     </div>
-                                    <div class="flex gap-6 items-start group">
-                                        <div class="w-16 text-right font-normal text-sky-900 pt-0.5">3:30 PM</div>
+                                    <div class="flex gap-6 group gap-x-6 gap-y-6 items-start">
+                                        <div class="font-normal text-sky-900 text-right w-16 pt-0.5">3:30 PM</div>
                                         <div class="flex-1 group-last:border-0 border-sky-900/5 border-b pb-5">
-                                            <p class="text-slate-700">Wedding Reception begins</p>
+                                            <p class="text-slate-700">Wedding reception begins</p>
+                                            <p class="uppercase text-sm text-slate-400 tracking-wider mt-1">Sala Balowa</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-6 items-start group">
+                                        <div class="font-normal text-sky-900 text-right w-16 pt-0.5">4:00 PM</div>
+                                        <div class="flex-1 group-last:border-0 border-sky-900/5 border-b pb-5">
+                                            <p class="text-slate-700">Main meal</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-6 items-start group">
+                                        <div class="font-normal text-sky-900 text-right w-16 pt-0.5">8:00 PM</div>
+                                        <div class="flex-1 group-last:border-0 border-sky-900/5 border-b pb-5">
+                                            <p class="text-slate-700">Served dinner</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-6 items-start group">
+                                        <div class="font-normal text-sky-900 text-right w-16 pt-0.5">11:00 PM</div>
+                                        <div class="flex-1 group-last:border-0 border-sky-900/5 border-b pb-5">
+                                            <p class="text-slate-700">Warm buffet</p>
                                         </div>
                                     </div>
                                     <div class="flex gap-6 items-start group">
                                         <div class="w-16 text-right font-normal text-sky-900 pt-0.5">3:30 AM</div>
                                         <div class="flex-1 pb-5 border-b border-sky-900/5 group-last:border-0">
-                                            <p class="text-slate-700">End of the party</p>
+                                            <p class="text-slate-700">End of wedding</p>
                                         </div>
                                     </div>
                                 </div>
@@ -383,7 +461,7 @@
                                 Our ceremony will be a <span class="font-normal text-emerald-700">civil wedding</span> – elegant, joyful, and full of emotion. It will take place <span class="font-normal text-emerald-700">outdoors, in the garden of the Oficyna building</span> at Topacz Castle.
                             </p>
                             <p class="">
-                                Please arrive on time – the ceremony starts exactly at <span class="font-normal text-sky-900">3:00 PM</span>. Please plan your travel accordingly.
+                                Please arrive on time – the ceremony starts exactly at <span class="font-normal text-sky-900"> 3:00 PM</span>and will last approximately<span class="font-normal text-sky-900"> 20 minutes</span>. We kindly ask that seated spots be reserved for elderly guests and those who need extra comfort.
                             </p>
                         </div>
                     </section>
@@ -422,11 +500,11 @@
                         </div>
                         <div class="max-w-2xl mx-auto text-lg text-slate-600 font-light leading-relaxed text-center space-y-6">
                             <p class="">
-                                Accommodation for wedding guests is reserved at <span class="font-normal text-sky-900">Hotel Bielany</span>, which is only a <span class="font-normal text-sky-900">5-minute drive</span> from Topacz Castle – perfect so you can party until the end without stressing about the return!
+                                For guests who have arranged accommodation with us, we have reserved rooms at <span class="font-normal text-sky-900">Hotel Bielany</span>, which is only a <span class="font-normal text-sky-900">5-minute drive</span> from Topacz Castle – perfect so you can party until the end without stressing about the return!
                             </p>
                             <p class="text-emerald-800 font-light bg-emerald-50/50 p-5 border border-emerald-100 rounded-sm">
-                                If you are planning to stay overnight – let us know as soon as possible so we can book a room for you.
-                            </p>
+                                Should anything change regarding your accommodation, please let us know as soon as possible.
+                            </p><p class="">Check-in is available from <span class="font-normal text-sky-900">2:00 PM</span> on the day of arrival, and check-out is by <span class="font-normal text-sky-900">12:00 PM</span> on the day of departure. Breakfast is served as a buffet between <span class="font-normal text-sky-900">6:30 AM – 10:00 AM</span>.</p>
                             <div class="bg-amber-50/30 p-6 rounded-sm border border-amber-100 mt-8 transition-colors hover:bg-amber-50/60">
                                 <p class="font-normal text-sky-900 mb-1">Hotel Bielany</p>
                                 <p class="text-sm text-slate-500 mb-4">ul. Klecińska 3, 55-040 Bielany Wrocławskie</p>
@@ -472,9 +550,9 @@
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-4 mt-6">
-                                    <div class="bg-yellow-50 p-2 rounded-full shrink-0 mt-1">
-                                        <iconify-icon icon="solar:map-arrow-linear" class="text-xl text-yellow-600"></iconify-icon>
-                                    </div>
+                                    <div class="shrink-0 bg-yellow-50 rounded-full mt-1 pt-2 pr-2 pb-2 pl-2">
+                                        
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="text-xl text-sky-600" style="color: rgb(234, 179, 8)" data-icon-set="solar" data-solar="point-on-map-outline"><path fill="currentColor" fill-rule="evenodd" d="M5.25 7.7c0-3.598 3.059-6.45 6.75-6.45c3.608 0 6.612 2.725 6.745 6.208l.478.16c.463.153.87.289 1.191.439c.348.162.667.37.911.709s.341.707.385 1.088c.04.353.04.78.04 1.269v5.748c0 .61 0 1.13-.047 1.547c-.05.438-.161.87-.463 1.237a2.3 2.3 0 0 1-.62.525c-.412.237-.855.276-1.296.253c-.42-.022-.933-.107-1.534-.208l-.041-.007c-1.293-.215-1.814-.296-2.322-.254q-.278.023-.552.083c-.498.109-.976.342-2.159.933l-.122.061c-1.383.692-2.234 1.118-3.154 1.251q-.415.06-.835.06c-.928-.002-1.825-.301-3.28-.786l-.127-.043l-.384-.128l-.037-.012c-.463-.154-.87-.29-1.191-.44c-.348-.162-.667-.37-.911-.709s-.341-.707-.385-1.088c-.04-.353-.04-.78-.04-1.269v-5.02c0-.786 0-1.448.067-1.967c.07-.542.23-1.072.666-1.47a2.3 2.3 0 0 1 .42-.304c.517-.287 1.07-.27 1.605-.166q.164.032.342.078q-.1-.67-.1-1.328m.499 3.01a9 9 0 0 0-1.028-.288c-.395-.077-.525-.03-.586.004a1 1 0 0 0-.14.101c-.053.048-.138.156-.19.556c-.053.41-.055.974-.055 1.825v4.93c0 .539.001.88.03 1.138c.028.238.072.327.112.381c.039.055.109.125.326.226c.236.11.56.219 1.07.39l.384.127c1.624.541 2.279.75 2.936.752q.31 0 .617-.044c.65-.094 1.276-.397 2.82-1.17l.093-.046c1.06-.53 1.714-.857 2.417-1.01q.37-.081.747-.113c.717-.06 1.432.06 2.593.253l.1.017c.655.109 1.083.18 1.407.196c.312.016.419-.025.471-.055a.8.8 0 0 0 .207-.175c.039-.047.097-.146.132-.456c.037-.323.038-.757.038-1.42v-5.667c0-.539-.001-.88-.03-1.138c-.028-.238-.072-.327-.112-.381c-.039-.055-.109-.125-.326-.226c-.236-.11-.56-.219-1.07-.39l-.06-.019a10.7 10.7 0 0 1-1.335 3.788c-.912 1.568-2.247 2.934-3.92 3.663a3.5 3.5 0 0 1-2.794 0c-1.673-.73-3.008-2.095-3.92-3.663a11 11 0 0 1-.934-2.087M12 2.75c-2.936 0-5.25 2.252-5.25 4.95c0 1.418.437 2.98 1.23 4.341c.791 1.362 1.908 2.47 3.223 3.044c.505.22 1.089.22 1.594 0c1.316-.574 2.432-1.682 3.224-3.044c.792-1.36 1.229-2.923 1.229-4.34c0-2.699-2.314-4.951-5.25-4.951m0 4a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 0 0 0-2.5M9.25 8a2.75 2.75 0 1 1 5.5 0a2.75 2.75 0 0 1-5.5 0" clip-rule="evenodd"></path></svg></div>
                                     <p class="text-lg font-light text-slate-600">
                                         For guests returning to <span class="font-normal text-sky-900">Wrocław</span> – taxis and apps like <span class="font-normal text-sky-900">Uber, Bolt, FreeNow</span> run regularly. Travel time is approx. 15–20 min.
                                     </p>
@@ -500,9 +578,9 @@
                         <section class="text-center md:text-left">
                             <div class="flex flex-col md:flex-row items-center gap-3 mb-6 justify-center md:justify-start">
                                 <iconify-icon icon="solar:cup-hot-linear" class="text-3xl text-emerald-600" style="stroke-width: 1.5;"></iconify-icon>
-                                <h2 class="font-['Cormorant_Garamond'] text-2xl sm:text-3xl tracking-tight text-sky-900 font-normal">Dinner &amp; Menu</h2>
+                                <h2 class="font-['Cormorant_Garamond'] text-2xl sm:text-3xl tracking-tight text-sky-900 font-normal">Dietary requirements</h2>
                             </div>
-                            <p class="leading-relaxed text-lg font-light text-slate-600">A <span class="font-normal text-sky-900">4-course wedding dinner</span> and a buffet supper await you. And to finish – the wedding cake! If you have any special dietary needs or food allergies, please let us know in advance.</p>
+                            <p class="leading-relaxed text-lg font-light text-slate-600">If you have any special dietary needs or food allergies, please let us know in advance.</p>
                         </section>
                     </div>
 
@@ -520,7 +598,7 @@
                                 <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1f1271c4-736f-4005-842d-b23aafc8892f_1600w.jpg" alt="Couple Walking in Tropical Sandbar Lagoon" class="transition-transform duration-700 group-hover:scale-105 w-full h-full object-cover">
                             </div>
                             <div class="aspect-[4/5] overflow-hidden rounded-sm border border-sky-900/5 group relative bg-sky-50">
-                                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4277ffce-30ef-49a7-a8bf-432ed99d8f7f_800w.jpg" alt="Aerial View of Couple Floating in Clear Sea" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c092a520-34d3-437d-a77d-4ca2e1d8eb2c_1600w.jpg" alt="Aerial View of Couple Floating in Clear Sea" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                             </div>
                             <div class="aspect-[4/5] overflow-hidden rounded-sm border border-sky-900/5 group relative bg-sky-50">
                                 <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/9556a1ec-9b70-44c5-9b00-beb210e5926b_1600w.jpg" alt="Romantic Couple on Tropical Sandbar" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
@@ -538,9 +616,6 @@
                             <iconify-icon icon="solar:letter-linear" class="text-4xl text-sky-600 mb-4" style="stroke-width: 1.5;"></iconify-icon>
                             <h2 class="font-['Cormorant_Garamond'] text-3xl sm:text-4xl tracking-tight text-sky-900 font-normal">Contact</h2>
                         </div>
-                        <p class="text-lg text-slate-600 font-light mb-8">
-                            Questions? Feel free to write!
-                        </p>
                         <div class="flex flex-col sm:flex-row justify-center gap-8 sm:gap-16 font-['Cormorant_Garamond'] text-xl tracking-wide text-sky-900">
                             <div>
                                 <span class="block text-xs font-['Inter'] uppercase tracking-widest text-emerald-700/60 mb-1">Natalia</span>
@@ -550,8 +625,18 @@
                                 <span class="block text-xs font-['Inter'] uppercase tracking-widest text-emerald-700/60 mb-1">Olek</span>
                                 +48 579 030 876
                             </div>
+                    <div class="flex flex-col sm:flex-row sm:gap-16 text-xl text-sky-900 tracking-wide font-['Cormorant_Garamond'] gap-y-4 justify-center">
+                            <div class="w-50">
+                                <span class="block uppercase text-xs text-emerald-700/60 tracking-widest font-['Inter'] mb-1">Martyna 
+(świadkowa)</span>
+                                796 664 889
+                            </div>
+                            <div class="w-50">
+                                <span class="block uppercase text-xs text-emerald-700/60 tracking-widest font-['Inter'] mb-1">Karol (świadek)</span>
+                                792 586 430
+                            </div>
                         </div>
-                    </section>
+                    </div></section>
                 </div>
             </div>
             
@@ -564,7 +649,7 @@
         </div>
     </main>
 
-    <script>
+    <script class="">
         function switchLanguage(lang) {
             const contentPl = document.getElementById('content-pl');
             const contentEn = document.getElementById('content-en');
@@ -591,5 +676,37 @@
                 btnEn.classList.add('text-slate-400');
             }
         }
+
+        // Countdown Timer Logic (Targeting May 30, 2026 15:00:00 CEST / UTC+2)
+        const targetDate = new Date("2026-05-30T15:00:00+02:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Update PL
+            document.getElementById("cd-days-pl").innerText = days;
+            document.getElementById("cd-hours-pl").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("cd-minutes-pl").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("cd-seconds-pl").innerText = seconds.toString().padStart(2, '0');
+
+            // Update EN
+            document.getElementById("cd-days-en").innerText = days;
+            document.getElementById("cd-hours-en").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("cd-minutes-en").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("cd-seconds-en").innerText = seconds.toString().padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
     </script>
 </body></html>
