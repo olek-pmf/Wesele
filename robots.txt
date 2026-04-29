@@ -4,7 +4,7 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: facebookcatalog
+User-agent: Facebot
 Allow: /
 
 User-agent: WhatsApp
